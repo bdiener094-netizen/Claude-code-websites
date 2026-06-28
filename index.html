@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E'memento — Food &amp; Fun · Пловдив</title>
+  <meta name="description" content="E'memento — Food &amp; Fun. Италианска кухня, изискани вкусове и неповторима атмосфера в сърцето на Пловдив. бул. България 140." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand">
+        <span class="nav__mark">E'</span>memento
+      </a>
+      <nav class="nav__links" aria-label="Основна навигация">
+        <a href="#story">Историята</a>
+        <a href="#menu">Кухнята</a>
+        <a href="#reviews">Отзиви</a>
+        <a href="#visit">Резервации</a>
+      </nav>
+      <a href="#visit" class="nav__cta">Запази маса</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero (scroll-driven orbit) ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__sticky">
+      <div class="hero__stage" id="heroStage">
+
+        <!-- Orbiting dishes -->
+        <figure class="dish dish--1" data-orbit>
+          <img src="assets/img/pizza.webp" alt="Пица с прошуто, рукола и бурата" loading="eager" />
+        </figure>
+        <figure class="dish dish--2" data-orbit>
+          <img src="assets/img/bruschetta.webp" alt="Асорти брускети върху плоча" loading="eager" />
+        </figure>
+        <figure class="dish dish--3" data-orbit>
+          <img src="assets/img/cheesecake.webp" alt="Шоколадов чийзкейк с горски плодове" loading="eager" />
+        </figure>
+
+        <!-- Center text that changes on scroll -->
+        <div class="hero__text">
+          <p class="hero__eyebrow">Пловдив · от 2009</p>
+
+          <div class="hero__phrases" id="heroPhrases">
+            <h1 class="hero__phrase is-active" data-phrase="0">
+              Вкус, който<br /><em>остава спомен</em>
+            </h1>
+            <h1 class="hero__phrase" data-phrase="1">
+              Италианска душа<br /><em>в сърцето на Пловдив</em>
+            </h1>
+            <h1 class="hero__phrase" data-phrase="2">
+              Food &amp; Fun<br /><em>от първия залък</em>
+            </h1>
+          </div>
+
+          <a href="#story" class="hero__scroll" aria-label="Към съдържанието">
+            <span></span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Story ===== -->
+  <section class="story" id="story">
+    <div class="container story__grid">
+      <div class="story__text reveal">
+        <p class="section__eyebrow">Историята</p>
+        <h2 class="section__title">Място, където поводът се превръща<br />в нещо магично</h2>
+        <p>
+          Повече от петнадесет години E'memento е любимото място на Пловдив за хората,
+          които ценят добрия вкус и спокойната елегантност. Под сенките на градината
+          или в топлия уют на салона — тук всеки момент е премислен до детайл.
+        </p>
+        <p>
+          Италианската ни кухня съчетава класиката с лек съвременен почерк: тестo,
+          месено на ръка, прясна паста, риба и морски деликатеси, и десерти, които
+          се помнят. Защото доброто хранене не е просто хранене — то е спомен.
+        </p>
+        <ul class="story__facts">
+          <li><span>170</span> места в салона</li>
+          <li><span>150</span> места в градината</li>
+          <li><span>08—24</span> всеки ден</li>
+        </ul>
+      </div>
+      <div class="story__aside reveal">
+        <blockquote>
+          <p>„Тук празникът става нещо повече от магичен.“</p>
+          <cite>— Екипът на E'memento</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Menu / Signature dishes ===== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="menu__head reveal">
+        <p class="section__eyebrow">Кухнята</p>
+        <h2 class="section__title">Подписани блюда</h2>
+        <p class="menu__lead">
+          Подбор от любимите вкусове на нашите гости — приготвени с прясни продукти и внимание към детайла.
+        </p>
+      </div>
+
+      <div class="menu__grid">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="assets/img/pizza.webp" alt="Пица Парма" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <h3>Пица Парма</h3>
+            <p>Прошуто крудо, бурата, чери домати, рукола и домашно песто върху тънко тесто.</p>
+            <span class="card__price">24 лв</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="assets/img/bruschetta.webp" alt="Асорти брускети" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <h3>Асорти брускети</h3>
+            <p>Пет вкуса върху печена филия — пушена сьомга, скариди, прошуто, хайвер и зеленчуци.</p>
+            <span class="card__price">19 лв</span>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="assets/img/cheesecake.webp" alt="Шоколадов чийзкейк" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <h3>Шоколадов чийзкейк</h3>
+            <p>Кадифена шоколадова текстура върху маслено блюдо, със свежи горски плодове и мента.</p>
+            <span class="card__price">12 лв</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reviews ===== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="reviews__head reveal">
+        <p class="section__eyebrow">Отзиви от Google</p>
+        <h2 class="section__title">Думите на нашите гости</h2>
+        <div class="reviews__rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="reviews__score">Високо оценени от хиляди гости в Google</span>
+        </div>
+      </div>
+
+      <div class="reviews__grid">
+        <figure class="quote reveal">
+          <div class="quote__stars" aria-hidden="true">★★★★★</div>
+          <blockquote>Едно от най-добрите места в Пловдив за кафе и вечеря. Градината е прекрасна, а обслужването — на ниво.</blockquote>
+          <figcaption>Мария Г.</figcaption>
+        </figure>
+
+        <figure class="quote reveal">
+          <div class="quote__stars" aria-hidden="true">★★★★★</div>
+          <blockquote>Пицата е една от най-вкусните, които съм опитвал. Уютна атмосфера и любезен персонал. Горещо препоръчвам!</blockquote>
+          <figcaption>Димитър П.</figcaption>
+        </figure>
+
+        <figure class="quote reveal">
+          <div class="quote__stars" aria-hidden="true">★★★★★</div>
+          <blockquote>Перфектно място за специален повод. Храната, виното и атмосферата създават наистина незабравимо изживяване.</blockquote>
+          <figcaption>Елена С.</figcaption>
+        </figure>
+
+        <figure class="quote reveal">
+          <div class="quote__stars" aria-hidden="true">★★★★★</div>
+          <blockquote>Десертите са произведение на изкуството. Връщаме се отново и отново — винаги на ниво. Благодаря Ви!</blockquote>
+          <figcaption>Ивайло Н.</figcaption>
+        </figure>
+
+        <figure class="quote reveal">
+          <div class="quote__stars" aria-hidden="true">★★★★★</div>
+          <blockquote>Прекрасна градина, страхотни коктейли и внимателно обслужване. Любимото ни място за петъчна вечер.</blockquote>
+          <figcaption>Виктория Д.</figcaption>
+        </figure>
+
+        <figure class="quote reveal">
+          <div class="quote__stars" aria-hidden="true">★★★★★</div>
+          <blockquote>Изискана кухня и стилна обстановка. Усеща се внимание към всеки детайл. Браво на целия екип!</blockquote>
+          <figcaption>Георги М.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Visit / Map / Booking ===== -->
+  <section class="visit" id="visit">
+    <div class="container visit__grid">
+
+      <div class="visit__info reveal">
+        <p class="section__eyebrow">Резервации</p>
+        <h2 class="section__title">Заповядайте при нас</h2>
+
+        <ul class="visit__details">
+          <li>
+            <span class="visit__label">Адрес</span>
+            бул. „България“ 140, Кършияка, 4003 Пловдив
+          </li>
+          <li>
+            <span class="visit__label">Телефон</span>
+            <a href="tel:+359893556945">+359 89 355 6945</a>
+          </li>
+          <li>
+            <span class="visit__label">Имейл</span>
+            <a href="mailto:emementoloungebar@gmail.com">emementoloungebar@gmail.com</a>
+          </li>
+          <li>
+            <span class="visit__label">Работно време</span>
+            Всеки ден · 08:00 — 24:00
+          </li>
+        </ul>
+
+        <form class="booking" id="bookingForm" novalidate>
+          <h3 class="booking__title">Резервирай маса</h3>
+          <div class="booking__row">
+            <label>
+              <span>Име</span>
+              <input type="text" name="name" placeholder="Вашето име" required />
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+359 …" required />
+            </label>
+          </div>
+          <div class="booking__row">
+            <label>
+              <span>Дата</span>
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              <span>Час</span>
+              <input type="time" name="time" required />
+            </label>
+            <label>
+              <span>Гости</span>
+              <input type="number" name="guests" min="1" max="30" value="2" required />
+            </label>
+          </div>
+          <button type="submit" class="booking__submit">Изпрати запитване</button>
+          <p class="booking__note" id="bookingNote" hidden></p>
+        </form>
+      </div>
+
+      <div class="visit__map reveal">
+        <div class="map__frame">
+          <iframe
+            title="E'memento на картата"
+            src="https://www.google.com/maps?q=Ememento,+Bulgaria+Blvd+140,+4003+Plovdiv&output=embed"
+            width="100%" height="100%" style="border:0;"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <a class="map__link" href="https://maps.app.goo.gl/SyG9wYPr39yJ9AyS9" target="_blank" rel="noopener">
+          Отвори в Google Maps →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="footer__brand"><span class="nav__mark">E'</span>memento</a>
+      <p class="footer__tag">Food &amp; Fun · Пловдив</p>
+      <nav class="footer__links" aria-label="Социални мрежи">
+        <a href="https://www.facebook.com/Ememento/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/emementofoodandfun/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> E'memento. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
