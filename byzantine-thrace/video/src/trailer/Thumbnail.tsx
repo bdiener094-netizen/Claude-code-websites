@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {C, F} from '../brand';
-import {Seal} from '../components/Brand';
+import {Seal, Wordmark} from '../components/Brand';
 import {Grain, Vignette} from '../components/Texture';
 import {Embers, WallSilhouette} from '../components/Walls';
 import {MapScene} from '../scenes/MapScene';
@@ -23,6 +23,14 @@ const Big: React.FC<{children: React.ReactNode; size: number; color: string; glo
   </div>
 );
 
+// Seal + wordmark, the channel's signature on every thumbnail.
+const Lockup: React.FC<{size?: number}> = ({size = 1}) => (
+  <div style={{display: 'flex', alignItems: 'center', gap: 16 * size}}>
+    <Seal size={92 * size} color={C.goldBright} />
+    <Wordmark size={50 * size} spacing={0.05} style={{textShadow: '0 3px 0 #000, 0 6px 18px rgba(0,0,0,0.9)'}} />
+  </div>
+);
+
 // A: burning walls, "1453 / THE END OF ROME"
 export const ThumbFire: React.FC = () => (
   <AbsoluteFill>
@@ -39,8 +47,8 @@ export const ThumbFire: React.FC = () => (
         </div>
       </div>
     </AbsoluteFill>
-    <div style={{position: 'absolute', right: 40, top: 34}}>
-      <Seal size={120} color={C.goldBright} />
+    <div style={{position: 'absolute', left: 60, bottom: 44}}>
+      <Lockup />
     </div>
     <Vignette amount={0.5} />
     <Grain />
@@ -67,6 +75,9 @@ export const ThumbMap: React.FC = () => (
       </Big>
       <div style={{fontFamily: F.display, fontWeight: 900, fontSize: 92, color: '#e0332b', textShadow: '0 6px 0 #000, 0 12px 26px #000'}}>53 DAYS</div>
     </AbsoluteFill>
+    <div style={{position: 'absolute', right: 60, top: 40}}>
+      <Lockup size={0.9} />
+    </div>
     <Vignette amount={0.45} />
   </AbsoluteFill>
 );
