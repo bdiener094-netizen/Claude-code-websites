@@ -20,8 +20,8 @@ Rule for every episode: the first sentence must make sense to a viewer who has n
 
 **01 · The Walls That Never Fell** · 413–1453 · High
 - Hook: "For a thousand years, no army ever stormed these walls."
-- Core: The Theodosian Walls (built 413 under Theodosius II) were a triple barrier: moat, outer wall, inner wall. Huns, Avars, Persians, Arabs and Bulgars all failed against them. The Crusaders took the city in 1204, but from the sea side, not through the land walls.
-- Ends on: "In 1451, a 19-year-old became sultan. And he wanted those walls."
+- Core: The Theodosian Walls (begun 413 under Theodosius II) were a triple barrier: moat, outer wall, inner wall. Avars and Persians (626), Arabs (717–18) and Bulgars (813) all failed against them. Attila's Huns never attacked them at all. The Crusaders took the city in 1204, but from the sea side, not through the land walls.
+- Ends on: "In 1451, a teenager became sultan. And he wanted those walls." (Mehmed was 18 at his accession.)
 - Sources: Runciman, Crowley
 
 **02 · The Empire That Was Just a City** · 1453 · High (population figure: Medium)
@@ -38,7 +38,7 @@ Rule for every episode: the first sentence must make sense to a viewer who has n
 
 **04 · The Boy Sultan Who Was Humiliated** · 1444–1451 · High
 - Hook: "At 12, he was made sultan. Then his father took the throne back."
-- Core: Mehmed II first ruled as a boy (1444–46). His father Murad II returned to power, which was a public humiliation. Mehmed took the throne again in 1451, aged 19. Europe assumed he was weak.
+- Core: Mehmed II first ruled as a boy (1444–46). His father Murad II returned to power, which was a public humiliation. Mehmed took the throne again in February 1451, aged 18. Europe assumed he was weak.
 - Ends on: "The Byzantines made the same mistake — and tried to blackmail him."
 - Sources: Runciman, Crowley
 
