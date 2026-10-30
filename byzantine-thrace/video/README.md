@@ -38,9 +38,28 @@ Remotion's license is free for individuals and companies of up to 3 people.
 | `yearSlam` | Big dramatic year reveal |
 | `end` | Final line, then the branded end card with the next episode |
 
-## Adding the voice-over (next step)
+## Voice-over and sound (generated in code)
 
-At the moment narration timing is **estimated** at about 2.5 words per second. Once the AI voice is chosen, the plan is:
-1. Generate each episode's narration with word-level timestamps (ElevenLabs returns these).
-2. Replace `estimateWords()` in `src/timing.ts` with the real timestamps, so captions, arrows and reveals land exactly on the spoken words.
-3. Add the audio track, plus music and sound effects, to `Episode.tsx`.
+The narration is made with **Kokoro**, an open-source text-to-speech model (Apache 2.0 license, so commercial use is allowed and it costs nothing). It returns word-level timestamps, which drive the captions, arrow launches and reveals. Sound effects are synthesised in Python: a low drone, an impact boom on hard cuts, and a whoosh on arrows.
+
+Set up once (Python 3.10–3.12):
+
+```bash
+python3.12 -m venv .venv && source .venv/bin/activate
+pip install kokoro soundfile scipy
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+```
+
+For each episode:
+
+```bash
+npx tsx scripts/export-lines.ts ep02                            # narration lines → out/ep02.lines.json
+python scripts/voiceover.py ep02 --voice bm_george --speed 0.95  # → public/voice/ep02/*.wav + src/episodes/ep02.voice.json
+python scripts/sfx.py                                            # only needed once
+```
+
+Then register the episode, and its `.voice.json`, in `src/Root.tsx`.
+
+**Pronunciation:** in the episode file, `text` is what appears in the captions and `speak` is what the voice says. Use `speak` for years ("1453" → "fourteen-fifty-three"; keep a year hyphenated so it counts as one word) and for names the model gets wrong (Mehmed → "Meh-med").
+
+An episode with no `.voice.json` falls back to an estimated pace of about 2.5 words per second, which is handy for drafting visuals before the voice exists.

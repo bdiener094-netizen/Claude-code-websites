@@ -17,5 +17,8 @@
     "react-dom": "^19.1.0",
     "remotion": "^4.0.539",
     "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15"
   }
 }

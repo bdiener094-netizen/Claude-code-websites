@@ -27,6 +27,7 @@ export const ep01: Segment[] = [
   },
   {
     text: 'In 413, Emperor Theodosius the Second began a barrier across the only land approach to the city.',
+    speak: 'In four-thirteen, Emperor Theodosius the Second began a barrier across the only land approach to the city.',
     scene: {
       type: 'map',
       camera: {from: CITY, to: WALLS},
@@ -64,6 +65,7 @@ export const ep01: Segment[] = [
   },
   {
     text: 'In 1204, Crusaders did take the city — but from the sea, not through these walls.',
+    speak: 'In twelve-oh-four, Crusaders did take the city — but from the sea, not through these walls.',
     scene: {
       type: 'map',
       camera: {from: {x: 600, y: 420, zoom: 1.5}, to: {x: 470, y: 400, zoom: 1.9}},
@@ -75,6 +77,7 @@ export const ep01: Segment[] = [
   },
   {
     text: 'By 1453, these walls had stood for over a thousand years.',
+    speak: 'By fourteen-fifty-three, these walls had stood for over a thousand years.',
     scene: {type: 'counter', from: 413, to: 1453, caption: '1,040 YEARS'},
   },
   {
@@ -89,6 +92,7 @@ export const ep01: Segment[] = [
   },
   {
     text: 'But in 1451, a teenager became sultan.',
+    speak: 'But in fourteen-fifty-one, a teenager became sultan.',
     scene: {type: 'yearSlam', year: '1451', caption: 'A TEENAGER BECOMES SULTAN'},
     hideCaptions: true,
     flash: true,

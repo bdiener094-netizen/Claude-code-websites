@@ -1,0 +1,700 @@
+{
+ "voice": "bm_george",
+ "speed": 0.95,
+ "lines": [
+  {
+   "file": "voice/ep01/01.wav",
+   "duration": 4.675,
+   "words": [
+    {
+     "text": "For",
+     "start": 0.225,
+     "end": 0.3375
+    },
+    {
+     "text": "a",
+     "start": 0.3375,
+     "end": 0.45
+    },
+    {
+     "text": "thousand",
+     "start": 0.45,
+     "end": 1.0125
+    },
+    {
+     "text": "years,",
+     "start": 1.0125,
+     "end": 1.725
+    },
+    {
+     "text": "no",
+     "start": 1.8625,
+     "end": 2.1375
+    },
+    {
+     "text": "army",
+     "start": 2.1375,
+     "end": 2.5625
+    },
+    {
+     "text": "ever",
+     "start": 2.5625,
+     "end": 2.8375
+    },
+    {
+     "text": "stormed",
+     "start": 2.8375,
+     "end": 3.275
+    },
+    {
+     "text": "these",
+     "start": 3.275,
+     "end": 3.5375
+    },
+    {
+     "text": "walls.",
+     "start": 3.5375,
+     "end": 4.375
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/02.wav",
+   "duration": 4.85,
+   "words": [
+    {
+     "text": "Constantinople.",
+     "start": 0.25,
+     "end": 1.5
+    },
+    {
+     "text": "Capital",
+     "start": 1.6375,
+     "end": 2.25
+    },
+    {
+     "text": "of",
+     "start": 2.25,
+     "end": 2.3375
+    },
+    {
+     "text": "the",
+     "start": 2.3375,
+     "end": 2.45
+    },
+    {
+     "text": "Roman",
+     "start": 2.45,
+     "end": 2.8375
+    },
+    {
+     "text": "Empire",
+     "start": 2.8375,
+     "end": 3.4875
+    },
+    {
+     "text": "in",
+     "start": 3.4875,
+     "end": 3.6125
+    },
+    {
+     "text": "the",
+     "start": 3.6125,
+     "end": 3.7875
+    },
+    {
+     "text": "East.",
+     "start": 3.7875,
+     "end": 4.55
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/03.wav",
+   "duration": 8.35,
+   "words": [
+    {
+     "text": "In",
+     "start": 0.25,
+     "end": 0.3875
+    },
+    {
+     "text": "413,",
+     "start": 0.3875,
+     "end": 1.5
+    },
+    {
+     "text": "Emperor",
+     "start": 1.625,
+     "end": 2.0625
+    },
+    {
+     "text": "Theodosius",
+     "start": 2.0625,
+     "end": 3.325
+    },
+    {
+     "text": "the",
+     "start": 3.325,
+     "end": 3.5
+    },
+    {
+     "text": "Second",
+     "start": 3.5,
+     "end": 3.975
+    },
+    {
+     "text": "began",
+     "start": 3.975,
+     "end": 4.3125
+    },
+    {
+     "text": "a",
+     "start": 4.3125,
+     "end": 4.4
+    },
+    {
+     "text": "barrier",
+     "start": 4.4,
+     "end": 5.125
+    },
+    {
+     "text": "across",
+     "start": 5.125,
+     "end": 5.5
+    },
+    {
+     "text": "the",
+     "start": 5.5,
+     "end": 5.6625
+    },
+    {
+     "text": "only",
+     "start": 5.6625,
+     "end": 6.025
+    },
+    {
+     "text": "land",
+     "start": 6.025,
+     "end": 6.5875
+    },
+    {
+     "text": "approach",
+     "start": 6.5875,
+     "end": 7.05
+    },
+    {
+     "text": "to",
+     "start": 7.05,
+     "end": 7.15
+    },
+    {
+     "text": "the",
+     "start": 7.15,
+     "end": 7.2875
+    },
+    {
+     "text": "city.",
+     "start": 7.2875,
+     "end": 8.05
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/04.wav",
+   "duration": 3.475,
+   "words": [
+    {
+     "text": "Not",
+     "start": 0.25,
+     "end": 0.45
+    },
+    {
+     "text": "one",
+     "start": 0.45,
+     "end": 0.7375
+    },
+    {
+     "text": "wall.",
+     "start": 0.7375,
+     "end": 1.275
+    },
+    {
+     "text": "Three",
+     "start": 1.4,
+     "end": 1.725
+    },
+    {
+     "text": "lines",
+     "start": 1.725,
+     "end": 2.1625
+    },
+    {
+     "text": "of",
+     "start": 2.1625,
+     "end": 2.25
+    },
+    {
+     "text": "defence.",
+     "start": 2.25,
+     "end": 3.175
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/05.wav",
+   "duration": 3.725,
+   "words": [
+    {
+     "text": "First,",
+     "start": 0.275,
+     "end": 0.7
+    },
+    {
+     "text": "a",
+     "start": 0.75,
+     "end": 0.8625
+    },
+    {
+     "text": "moat,",
+     "start": 0.8625,
+     "end": 1.425
+    },
+    {
+     "text": "about",
+     "start": 1.525,
+     "end": 1.8625
+    },
+    {
+     "text": "twenty",
+     "start": 1.8625,
+     "end": 2.225
+    },
+    {
+     "text": "metres",
+     "start": 2.225,
+     "end": 2.6375
+    },
+    {
+     "text": "wide.",
+     "start": 2.6375,
+     "end": 3.425
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/06.wav",
+   "duration": 2.475,
+   "words": [
+    {
+     "text": "Then",
+     "start": 0.25,
+     "end": 0.6125
+    },
+    {
+     "text": "an",
+     "start": 0.6125,
+     "end": 0.8625
+    },
+    {
+     "text": "outer",
+     "start": 0.8625,
+     "end": 1.375
+    },
+    {
+     "text": "wall.",
+     "start": 1.375,
+     "end": 2.175
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/07.wav",
+   "duration": 5.0,
+   "words": [
+    {
+     "text": "Then",
+     "start": 0.25,
+     "end": 0.475
+    },
+    {
+     "text": "the",
+     "start": 0.475,
+     "end": 0.625
+    },
+    {
+     "text": "inner",
+     "start": 0.625,
+     "end": 0.8875
+    },
+    {
+     "text": "wall:",
+     "start": 0.8875,
+     "end": 1.45
+    },
+    {
+     "text": "twelve",
+     "start": 1.5625,
+     "end": 1.925
+    },
+    {
+     "text": "metres",
+     "start": 1.925,
+     "end": 2.325
+    },
+    {
+     "text": "high,",
+     "start": 2.325,
+     "end": 2.775
+    },
+    {
+     "text": "with",
+     "start": 2.875,
+     "end": 3.0875
+    },
+    {
+     "text": "ninety-six",
+     "start": 3.0875,
+     "end": 3.7875
+    },
+    {
+     "text": "towers.",
+     "start": 3.7875,
+     "end": 4.7
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/08.wav",
+   "duration": 3.525,
+   "words": [
+    {
+     "text": "Avars.",
+     "start": 0.25,
+     "end": 0.675
+    },
+    {
+     "text": "Persians.",
+     "start": 0.7375,
+     "end": 1.55
+    },
+    {
+     "text": "Arabs.",
+     "start": 1.6875,
+     "end": 2.175
+    },
+    {
+     "text": "Bulgars.",
+     "start": 2.2625,
+     "end": 3.225
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/09.wav",
+   "duration": 2.925,
+   "words": [
+    {
+     "text": "They",
+     "start": 0.25,
+     "end": 0.4
+    },
+    {
+     "text": "all",
+     "start": 0.4,
+     "end": 0.6375
+    },
+    {
+     "text": "came.",
+     "start": 0.6375,
+     "end": 1.225
+    },
+    {
+     "text": "They",
+     "start": 1.325,
+     "end": 1.5
+    },
+    {
+     "text": "all",
+     "start": 1.5,
+     "end": 1.75
+    },
+    {
+     "text": "failed.",
+     "start": 1.75,
+     "end": 2.625
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/10.wav",
+   "duration": 6.575,
+   "words": [
+    {
+     "text": "In",
+     "start": 0.25,
+     "end": 0.44126984126984126
+    },
+    {
+     "text": "1204,",
+     "start": 0.44126984126984126,
+     "end": 0.8238095238095238
+    },
+    {
+     "text": "Crusaders",
+     "start": 0.8238095238095238,
+     "end": 1.6845238095238095
+    },
+    {
+     "text": "did",
+     "start": 1.6845238095238095,
+     "end": 1.9714285714285715
+    },
+    {
+     "text": "take",
+     "start": 1.9714285714285715,
+     "end": 2.353968253968254
+    },
+    {
+     "text": "the",
+     "start": 2.353968253968254,
+     "end": 2.640873015873016
+    },
+    {
+     "text": "city",
+     "start": 2.640873015873016,
+     "end": 3.0234126984126983
+    },
+    {
+     "text": "\u2014",
+     "start": 3.0234126984126983,
+     "end": 3.119047619047619
+    },
+    {
+     "text": "but",
+     "start": 3.119047619047619,
+     "end": 3.405952380952381
+    },
+    {
+     "text": "from",
+     "start": 3.405952380952381,
+     "end": 3.7884920634920634
+    },
+    {
+     "text": "the",
+     "start": 3.7884920634920634,
+     "end": 4.075396825396825
+    },
+    {
+     "text": "sea,",
+     "start": 4.075396825396825,
+     "end": 4.362301587301587
+    },
+    {
+     "text": "not",
+     "start": 4.362301587301587,
+     "end": 4.64920634920635
+    },
+    {
+     "text": "through",
+     "start": 4.64920634920635,
+     "end": 5.318650793650794
+    },
+    {
+     "text": "these",
+     "start": 5.318650793650794,
+     "end": 5.796825396825397
+    },
+    {
+     "text": "walls.",
+     "start": 5.796825396825397,
+     "end": 6.2749999999999995
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/11.wav",
+   "duration": 5.75,
+   "words": [
+    {
+     "text": "By",
+     "start": 0.25,
+     "end": 0.5
+    },
+    {
+     "text": "1453,",
+     "start": 0.5,
+     "end": 2.025
+    },
+    {
+     "text": "these",
+     "start": 2.125,
+     "end": 2.425
+    },
+    {
+     "text": "walls",
+     "start": 2.425,
+     "end": 2.7875
+    },
+    {
+     "text": "had",
+     "start": 2.7875,
+     "end": 2.95
+    },
+    {
+     "text": "stood",
+     "start": 2.95,
+     "end": 3.2375
+    },
+    {
+     "text": "for",
+     "start": 3.2375,
+     "end": 3.6375
+    },
+    {
+     "text": "over",
+     "start": 3.6375,
+     "end": 3.925
+    },
+    {
+     "text": "a",
+     "start": 3.925,
+     "end": 4.05
+    },
+    {
+     "text": "thousand",
+     "start": 4.05,
+     "end": 4.6125
+    },
+    {
+     "text": "years.",
+     "start": 4.6125,
+     "end": 5.475
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/12.wav",
+   "duration": 4.15,
+   "words": [
+    {
+     "text": "And",
+     "start": 0.225,
+     "end": 0.3625
+    },
+    {
+     "text": "the",
+     "start": 0.3625,
+     "end": 0.45
+    },
+    {
+     "text": "people",
+     "start": 0.45,
+     "end": 0.825
+    },
+    {
+     "text": "behind",
+     "start": 0.825,
+     "end": 1.3
+    },
+    {
+     "text": "them",
+     "start": 1.3,
+     "end": 1.825
+    },
+    {
+     "text": "believed",
+     "start": 1.825,
+     "end": 2.4
+    },
+    {
+     "text": "they",
+     "start": 2.4,
+     "end": 2.6125
+    },
+    {
+     "text": "always",
+     "start": 2.6125,
+     "end": 3.1375
+    },
+    {
+     "text": "would.",
+     "start": 3.1375,
+     "end": 3.825
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/13.wav",
+   "duration": 4.4,
+   "words": [
+    {
+     "text": "But",
+     "start": 0.225,
+     "end": 0.35
+    },
+    {
+     "text": "in",
+     "start": 0.35,
+     "end": 0.5125
+    },
+    {
+     "text": "1451,",
+     "start": 0.5125,
+     "end": 1.925
+    },
+    {
+     "text": "a",
+     "start": 2.0625,
+     "end": 2.1875
+    },
+    {
+     "text": "teenager",
+     "start": 2.1875,
+     "end": 2.775
+    },
+    {
+     "text": "became",
+     "start": 2.775,
+     "end": 3.225
+    },
+    {
+     "text": "sultan.",
+     "start": 3.225,
+     "end": 4.125
+    }
+   ]
+  },
+  {
+   "file": "voice/ep01/14.wav",
+   "duration": 2.575,
+   "words": [
+    {
+     "text": "And",
+     "start": 0.225,
+     "end": 0.3625
+    },
+    {
+     "text": "he",
+     "start": 0.3625,
+     "end": 0.475
+    },
+    {
+     "text": "wanted",
+     "start": 0.475,
+     "end": 1.0125
+    },
+    {
+     "text": "these",
+     "start": 1.0125,
+     "end": 1.3625
+    },
+    {
+     "text": "walls.",
+     "start": 1.3625,
+     "end": 2.275
+    }
+   ]
+  }
+ ]
+}

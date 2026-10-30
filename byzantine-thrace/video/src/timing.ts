@@ -1,7 +1,8 @@
 import type {SceneSpec} from './scenes/types';
 
 export type Segment = {
-  text: string; // narration, exactly as the voice reads it
+  text: string; // narration as captioned on screen
+  speak?: string; // how the voice should say it, when it differs (years, names)
   scene: SceneSpec;
   hideCaptions?: boolean; // scene already shows the words as typography
   flash?: boolean; // gold flash on the cut into this segment
@@ -10,10 +11,12 @@ export type Segment = {
 
 export type TimedWord = {text: string; start: number; end: number}; // frames, relative to segment
 
-export type TimedSegment = Segment & {from: number; duration: number; words: TimedWord[]};
+export type TimedSegment = Segment & {from: number; duration: number; words: TimedWord[]; audio?: string};
 
-// Placeholder narration pace until real voice-over exists. When the AI voice is
-// generated, replace estimateWords() with the voice's word-level timestamps.
+// Output of scripts/voiceover.py: one audio file and real word timings (seconds) per line.
+export type VoiceTrack = {voice: string; lines: {file: string; duration: number; words: {text: string; start: number; end: number}[]}[]};
+
+// Fallback pace for episodes that have no voice-over generated yet.
 const WORDS_PER_SEC = 2.5;
 const PAUSE = {'.': 0.38, ':': 0.3, ',': 0.16, '—': 0.22} as Record<string, number>;
 const TAIL = 0.3;
@@ -31,12 +34,20 @@ const estimateWords = (text: string, fps: number): {words: TimedWord[]; length: 
   return {words, length: t};
 };
 
-export const buildTimeline = (segments: Segment[], fps: number) => {
+const VOICED_TAIL = 0.1; // voice clips already carry a little silence at each end
+
+export const buildTimeline = (segments: Segment[], fps: number, voice?: VoiceTrack) => {
   let cursor = 0;
-  const timed: TimedSegment[] = segments.map((seg) => {
-    const {words, length} = estimateWords(seg.text, fps);
+  const timed: TimedSegment[] = segments.map((seg, i) => {
+    const line = voice?.lines[i];
+    const {words, length} = line
+      ? {
+          words: line.words.map((w) => ({text: w.text, start: Math.round(w.start * fps), end: Math.round(w.end * fps)})),
+          length: line.duration - TAIL + VOICED_TAIL,
+        }
+      : estimateWords(seg.text, fps);
     const duration = Math.round((Math.max(1.3, length) + TAIL + (seg.hold ?? 0)) * fps);
-    const out = {...seg, from: cursor, duration, words};
+    const out = {...seg, from: cursor, duration, words, audio: line?.file};
     cursor += duration;
     return out;
   });
