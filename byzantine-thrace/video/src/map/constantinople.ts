@@ -45,3 +45,9 @@ export const LABELS = {
 export type LabelKey = keyof typeof LABELS;
 
 export const HAGIA_SOPHIA: Pt = [736, 466];
+
+// The great chain (boom) across the mouth of the Golden Horn, city to Galata
+export const CHAIN: Pt[] = [
+  [768, 436],
+  [737, 385],
+];

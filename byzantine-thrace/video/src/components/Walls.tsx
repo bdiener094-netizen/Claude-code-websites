@@ -1,12 +1,12 @@
-import React from 'react';
-import {AbsoluteFill, interpolate, random, useCurrentFrame} from 'remotion';
+import React, {useMemo} from 'react';
+import {AbsoluteFill, interpolate, random, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C} from '../brand';
 
 // Silhouette of the Theodosian land walls: tall inner towers behind, low outer wall in front.
-const skyline = (baseY: number, towerH: number, wallH: number, step: number, offset: number) => {
+const skyline = (width: number, height: number, baseY: number, towerH: number, wallH: number, step: number, offset: number) => {
   const crenel = 18;
-  let d = `M -20,1920 L -20,${baseY - wallH}`;
-  for (let x = -20 + offset; x < 1120; x += step) {
+  let d = `M -20,${height} L -20,${baseY - wallH}`;
+  for (let x = -20 + offset; x < width + 40; x += step) {
     const towerL = x + step * 0.35;
     const towerR = towerL + step * 0.42;
     // wall run with crenellations
@@ -20,16 +20,22 @@ const skyline = (baseY: number, towerH: number, wallH: number, step: number, off
     }
     d += ` L ${towerR},${baseY - towerH} L ${towerR},${baseY - wallH}`;
   }
-  d += ` L 1120,${baseY - wallH} L 1120,1920 Z`;
+  d += ` L ${width + 40},${baseY - wallH} L ${width + 40},${height} Z`;
   return d;
 };
 
-const INNER = skyline(1500, 560, 420, 300, 0);
-const OUTER = skyline(1620, 300, 220, 300, 150);
-
-export const WallSilhouette: React.FC<{rim?: string; sky: [string, string]; push?: number}> = ({rim = C.gold, sky, push = 0}) => (
+export const WallSilhouette: React.FC<{rim?: string; sky: [string, string]; push?: number}> = ({rim = C.gold, sky, push = 0}) => {
+  const {width, height} = useVideoConfig();
+  const [INNER, OUTER] = useMemo(
+    () => [
+      skyline(width, height, height * 0.78, height * 0.29, height * 0.22, 300, 0),
+      skyline(width, height, height * 0.845, height * 0.155, height * 0.115, 300, 150),
+    ],
+    [width, height],
+  );
+  return (
   <AbsoluteFill style={{background: `linear-gradient(180deg, ${sky[0]} 0%, ${sky[1]} 70%)`}}>
-    <svg width={1080} height={1920} style={{position: 'absolute', transform: `scale(${1 + push})`, transformOrigin: '50% 85%'}}>
+    <svg width={width} height={height} style={{position: 'absolute', transform: `scale(${1 + push})`, transformOrigin: '50% 85%'}}>
       <defs>
         <filter id="rimglow" x="-10%" y="-10%" width="120%" height="120%">
           <feGaussianBlur stdDeviation="5" />
@@ -40,20 +46,23 @@ export const WallSilhouette: React.FC<{rim?: string; sky: [string, string]; push
       <path d={OUTER} fill="#070403" stroke={rim} strokeWidth="1.5" strokeOpacity="0.45" />
     </svg>
   </AbsoluteFill>
-);
+  );
+};
 
 // Drifting embers for the dark scenes.
 export const Embers: React.FC<{count?: number; color?: string}> = ({count = 40, color = C.goldBright}) => {
   const frame = useCurrentFrame();
+  const {width, height} = useVideoConfig();
+  const span = height + 30;
   return (
     <AbsoluteFill style={{pointerEvents: 'none'}}>
       {Array.from({length: count}).map((_, i) => {
         const speed = 1.2 + random(`s${i}`) * 2.8;
-        const x0 = random(`x${i}`) * 1080;
-        const y = 1950 - ((frame * speed + random(`y${i}`) * 1950) % 1950);
+        const x0 = random(`x${i}`) * width;
+        const y = span - ((frame * speed + random(`y${i}`) * span) % span);
         const x = x0 + Math.sin((frame + i * 37) / 30) * 25;
         const size = 2 + random(`z${i}`) * 5;
-        const life = interpolate(y, [0, 600, 1950], [0, 0.9, 0.5]);
+        const life = interpolate(y, [0, span * 0.3, span], [0, 0.9, 0.5]);
         return (
           <div
             key={i}

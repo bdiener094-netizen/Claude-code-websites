@@ -24,6 +24,7 @@ export type SceneSpec =
       arrows?: Arrow[];
       stamp?: {year: string; caption: string};
       dusk?: boolean;
+      chain?: boolean; // the boom across the Golden Horn
     }
   | {type: 'section'; level: 0 | 1 | 2 | 3}
   | {type: 'statement'; lines: string[]; seal?: string}

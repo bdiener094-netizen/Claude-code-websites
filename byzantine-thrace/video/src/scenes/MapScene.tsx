@@ -1,8 +1,8 @@
 import React from 'react';
-import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
-import {C, F, H, W} from '../brand';
+import {AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig} from 'remotion';
+import {C, F} from '../brand';
 import {ParchmentOverlay} from '../components/Texture';
-import {HAGIA_SOPHIA, LABELS, LAND, LAND_WALLS, SEA_WALLS} from '../map/constantinople';
+import {CHAIN, HAGIA_SOPHIA, LABELS, LAND, LAND_WALLS, SEA_WALLS} from '../map/constantinople';
 import type {TimedWord} from '../timing';
 import type {Arrow, Pt, SceneSpec} from './types';
 
@@ -144,6 +144,7 @@ const Stamp: React.FC<{year: string; caption: string}> = ({year, caption}) => {
 
 export const MapScene: React.FC<{spec: MapSpec; duration: number; words: TimedWord[]}> = ({spec, duration, words}) => {
   const frame = useCurrentFrame();
+  const {width: W, height: H} = useVideoConfig();
   const p = ease(Math.min(1, frame / duration));
   const {from, to} = spec.camera;
   const cam = {x: from.x + (to.x - from.x) * p, y: from.y + (to.y - from.y) * p, zoom: from.zoom + (to.zoom - from.zoom) * p};
@@ -201,6 +202,33 @@ export const MapScene: React.FC<{spec: MapSpec; duration: number; words: TimedWo
             />
             {TOWERS.filter((t) => t.at <= wallDraw).map((t, i) => (
               <rect key={i} x={t.p[0] - 7 * k} y={t.p[1] - 7 * k} width={14 * k} height={14 * k} fill={C.ink} />
+            ))}
+          </g>
+        )}
+
+        {spec.chain && (
+          <g>
+            <line
+              x1={CHAIN[0][0]}
+              y1={CHAIN[0][1]}
+              x2={CHAIN[0][0] + (CHAIN[1][0] - CHAIN[0][0]) * interpolate(frame, [2, 14], [0, 1], clamp)}
+              y2={CHAIN[0][1] + (CHAIN[1][1] - CHAIN[0][1]) * interpolate(frame, [2, 14], [0, 1], clamp)}
+              stroke={C.goldBright}
+              strokeWidth={16 * k}
+              strokeDasharray={`${12 * k} ${6 * k}`}
+              filter="url(#wallglow)"
+            />
+            <line
+              x1={CHAIN[0][0]}
+              y1={CHAIN[0][1]}
+              x2={CHAIN[0][0] + (CHAIN[1][0] - CHAIN[0][0]) * interpolate(frame, [2, 14], [0, 1], clamp)}
+              y2={CHAIN[0][1] + (CHAIN[1][1] - CHAIN[0][1]) * interpolate(frame, [2, 14], [0, 1], clamp)}
+              stroke={C.ink}
+              strokeWidth={10 * k}
+              strokeDasharray={`${12 * k} ${6 * k}`}
+            />
+            {CHAIN.map((pt, i) => (
+              <circle key={i} cx={pt[0]} cy={pt[1]} r={8 * k} fill={C.gold} stroke={C.ink} strokeWidth={2 * k} />
             ))}
           </g>
         )}
