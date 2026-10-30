@@ -5,7 +5,14 @@ import '@fontsource/eb-garamond/700.css';
 import '@fontsource/im-fell-english/400.css';
 import '@fontsource/im-fell-english/400-italic.css';
 
-// Byzantine Thrace brand system. Every scene pulls colours and type from here.
+// ByzantineThrace brand system. Every scene pulls its name, colours and type from here.
+
+export const BRAND = {
+  name: 'ByzantineThrace', // one word; Cinzel renders the lower case as small caps, so B and T stand tall
+  handle: '@ByzantineThrace',
+  sealText: 'ByzantineThrace ✦ MCDLIII ✦ ', // MCDLIII = 1453
+};
+
 export const C = {
   night: '#0c0807', // backgrounds
   ink: '#24170f', // map lines, manuscript text

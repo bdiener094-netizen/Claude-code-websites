@@ -13,8 +13,8 @@ import {
   useVideoConfig,
 } from 'remotion';
 import score from '../../public/music/trailer-hits.json';
-import {C, F, FONT_CHECKS} from '../brand';
-import {Seal} from '../components/Brand';
+import {BRAND, C, F, FONT_CHECKS} from '../brand';
+import {Handle, Seal, Wordmark} from '../components/Brand';
 import {Grain, Parchment, Vignette} from '../components/Texture';
 import {Embers, WallSilhouette} from '../components/Walls';
 import {MapScene} from '../scenes/MapScene';
@@ -47,7 +47,7 @@ const WALLS = {x: 230, y: 530, zoom: 1.6};
 
 const SHOTS: Shot[] = [
   // Intro: slow, ominous
-  {beat: 0, beats: 8, bg: 'night', lines: ['BYZANTINE THRACE', 'PRESENTS'], size: 70, zoom: 0.08},
+  {beat: 0, beats: 8, bg: 'night', lines: [BRAND.name, 'PRESENTS'], size: 88, zoom: 0.08},
   {beat: 8, beats: 4, bg: 'walls', lines: ['FOR A THOUSAND YEARS'], size: 92},
   {
     beat: 12,
@@ -260,7 +260,12 @@ const EndCard: React.FC = () => {
       <div style={{opacity: t, transform: `scale(${0.85 + t * 0.15}) rotate(${(1 - t) * -25}deg)`}}>
         <Seal size={220} />
       </div>
-      <div style={{fontFamily: F.display, fontWeight: 900, fontSize: 84, letterSpacing: 16, color: C.goldBright, opacity: t}}>BYZANTINE THRACE</div>
+      <div style={{opacity: t}}>
+        <Wordmark size={110} />
+      </div>
+      <div style={{opacity: sub}}>
+        <Handle size={44} />
+      </div>
       <div style={{fontFamily: F.map, fontStyle: 'italic', fontSize: 46, color: C.cream, opacity: sub}}>The Fall of Constantinople · a 40-part series</div>
       <div style={{marginTop: 26, padding: '14px 46px', border: `3px solid ${C.gold}`, fontFamily: F.display, fontWeight: 700, fontSize: 40, letterSpacing: 10, color: C.gold, opacity: sub}}>
         SUBSCRIBE

@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
 import {C, F} from '../brand';
-import {Seal} from '../components/Brand';
+import {Handle, Seal, Wordmark} from '../components/Brand';
 import {Parchment} from '../components/Texture';
 import {Embers, WallSilhouette} from '../components/Walls';
 import type {TimedWord} from '../timing';
@@ -216,7 +216,8 @@ export const EndScene: React.FC<{line: string; series: string; next: string; dur
         <div style={{transform: `scale(${0.8 + card * 0.2}) rotate(${(1 - card) * -20}deg)`}}>
           <Seal size={250} />
         </div>
-        <div style={{fontFamily: F.display, fontWeight: 900, fontSize: 70, letterSpacing: 10, color: C.goldBright}}>BYZANTINE THRACE</div>
+        <Wordmark size={84} />
+        <Handle size={38} />
         <div style={{fontFamily: F.map, fontStyle: 'italic', fontSize: 44, color: C.cream}}>{series}</div>
         <div style={{marginTop: 50, fontFamily: F.display, fontWeight: 700, fontSize: 32, letterSpacing: 8, color: C.gold}}>NEXT</div>
         <div style={{fontFamily: F.display, fontWeight: 900, fontSize: 50, color: C.cream, textAlign: 'center', padding: '0 80px'}}>{next}</div>
